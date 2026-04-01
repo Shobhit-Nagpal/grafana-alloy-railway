@@ -1,6 +1,6 @@
 prometheus.scrape "api" {
   targets = [{"__address__" = env("TARGET_URL")}]
-  scrape_interval = "15s"
+  scrape_interval = "60s"
   forward_to = [prometheus.remote_write.grafana_cloud.receiver]
 }
 
